@@ -115,3 +115,70 @@ print(my_string.lower()) #for lowercase
 
 #check starts with --
 print(my_string.startswith('n'))
+
+#check ends with --
+print(my_string.endswith('i'))
+
+#find method -- this will return the index of the characters, we can also check the substring
+string = "hello world"
+print(f"find: {string.find('h')}")
+
+#count method -- returns the how many char in the string
+print(f"count: {string.count('l')}")
+
+#replace method - we can replace the char
+print(f"replace: {string.replace('world', 'mark')}")
+
+
+#convert the string to list
+my_string = "how are you doing?"
+my_list = list(my_string) # this method the string as a list by letters, its not fair
+#print(f"List: {my_list}")
+
+#use split() for convert the list
+my_string = "how are you doing?"
+my_list = my_string.split()
+print(f"List: {my_list}")
+
+#join() method for cancatinate the list
+my_string = " ".join(my_list)
+print(f"join: {my_string}")
+
+#join is a very very important and very use full function...
+
+
+#----------------------------------------- String Fromating -----------------------------------------
+print("----------------------------------------- String Formating -----------------------------------------")
+
+# %, .format(), f-Strings
+
+# first -- % - it means indicate to the intepreter the variable is a this or that(string, digits,...) datatypes
+var = "tom"
+print("the name is %s" % var) # s means string
+
+var = 5
+print("the value is %d" % var) # d means digit
+
+var = 8.8942020
+print("the value is %f" % var) # f means floating value
+
+#we can also mention, how many digits we want
+var = 7.890392898423424214
+print("the value is %.2f" % var) # by default, its shows only 6 digits, %.2f means, we want 2 digits
+
+#.format() method
+var1 = "tom"
+var2 = 5
+var3 = 3.8998
+print("the variable is {} and {}".format(var1, var2))
+print("the variable is {}".format(var2))
+print("the variable is {:.2f}".format(var3))
+
+
+#f-String method
+var1 = "tom"
+var2 = 10
+print(f"the variable is {var1} and {var2}")
+#we can use some math functions here
+print(f"the variable is {var1} and {var2 % 5}") # +, -, *, %, //
+
