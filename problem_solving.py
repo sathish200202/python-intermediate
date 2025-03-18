@@ -113,4 +113,91 @@ print(result)
 
 #Merge Two Sorted Lists
 #Prime Number Check
+#Prime Number
+def prime_Number(num):
+    if num <= 1:
+        print("not prime number")
+    if num % 2 == 0:
+        print("not prime number")
+    return
+
+#will be continue................
+
 #Fibonacci Sequence
+
+
+#FizzBuzz program
+
+def fizz_buzz(num):
+    for i in range(1, num+1):
+        if i % 3 == 0 and i % 5 == 0:
+            print("FizzBuzz")
+        elif i % 3 == 0:
+            print("Fizz")
+        elif i % 5 == 0:
+            print("Buzz")
+        else:
+            print(i)
+
+
+number = int(input("Number: "))
+if number > 0:
+    fizz_buzz(number)
+else:
+    print("Please! Enter the positive number only")
+
+
+#Count Occurrences of a Character in a String
+def count_occurrences_string(string, char):
+    count = 0
+    for c in string:
+        if c == char:
+            count += 1
+            
+    return count
+
+string = "aaalllssss"
+char = input("Enter a char: ")
+if char in string:
+    result = count_occurrences_string(string, char)
+    print(result)
+else:
+    print("The character not in a String")
+
+
+#Password checker
+def Password_Checker(password):
+    if len(password) < 6:
+        return "Password should be atleast 6 characters"
+    has_upper = False
+    has_lower = False
+    has_digits = False
+    has_special = False
+    special_char = "!@#$%&*:"
+    
+    for char in password:
+        if char.isupper():
+            has_upper = True
+        elif char.islower():
+            has_lower = True
+        elif char.isdigit():
+            has_digits = True
+        elif char in special_char:
+            has_special = True
+        
+    if not has_upper:
+        return "Password should have atleast one uppercase letter"
+    if not has_lower:
+        return "Password should have atleast one lowercase letter"
+    if not has_digits:
+        return "Password should have atleast one digit"
+    if not has_special:
+        return "Password should have atleast one special character(like: !,@,#,$,%,&,*,:)"
+    
+    return "Password is Strong!"
+
+password = input("Enter your password: ")
+result = Password_Checker(password)
+print(result)
+
+ 
